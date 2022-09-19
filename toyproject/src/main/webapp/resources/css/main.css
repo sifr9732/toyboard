@@ -1,0 +1,31 @@
+#main_position {
+	margin: 0 auto;
+	width: 860px;
+	height: 560px;
+	margin-top:20px;
+}
+
+.tbodyTag {
+	
+	border-bottom:1px solid gray;
+	
+}
+
+ .theadTag > td , .tbodyTag > td {
+	
+	text-align: center;
+}
+
+.td_1 {
+	width: 15%
+}
+.td_2 {
+	width: 35%;
+}
+.td_3 {
+	width: 15%;
+}
+.td_4 {
+	
+	width: 35%;
+}
