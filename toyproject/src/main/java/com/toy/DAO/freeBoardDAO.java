@@ -24,6 +24,10 @@ public class freeBoardDAO {
 		return this.sqlSessionTemplate.selectOne("toyproject.freeBoard_View", map);
 	}
 	
+	public int freeBoardInsert (Map<String, Object> map) {
+		return this.sqlSessionTemplate.insert("toyproject.freeBoardInsert", map);
+	}
+	
 	
 	
 }

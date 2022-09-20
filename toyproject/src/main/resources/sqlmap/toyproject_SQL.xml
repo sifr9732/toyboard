@@ -47,5 +47,19 @@
 		WHERE fb_seq = #{fb_seq}
 	</select>
 	
+	<insert id="freeBoardInsert"  parameterType="hashMap">
+	
+		INSERT INTO freeboard (
+			  fb_title
+		    , fb_writer
+		    , fb_content
+		    )
+		VALUES (
+			  #{fb_title}
+			, #{fb_writer}
+			, #{fb_content}
+		);
+	
+	</insert>
 
 </mapper>

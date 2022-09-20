@@ -27,4 +27,14 @@ public class freeBoardServiceImpl implements freeBoardService {
 		return this.dao.freeBoardView(map);
 	}
 	
+	@Override
+	public boolean freeBoardInsert(Map<String, Object> map) {
+		int chek = this.dao.freeBoardInsert(map);
+		if(chek != 1 ) {
+			return chek == 0;
+		} else {
+			return chek == 1;
+		}
+	}
+	
 }

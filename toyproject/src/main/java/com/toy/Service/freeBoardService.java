@@ -9,4 +9,6 @@ public interface freeBoardService {
 
 	Map<String, Object> freeBoard_View(Map<String, Object> map);
 
+	boolean freeBoardInsert(Map<String, Object> map);
+
 }

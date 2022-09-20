@@ -52,7 +52,10 @@
 			    </tr>
 			    </c:forEach> 
 			  </tbody>
-		</table>
+		</table>	
+		<a href="/freeBoardInsert">글쓰기</a>
+		
+	
 	</div>
 	
 
