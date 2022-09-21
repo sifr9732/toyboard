@@ -65,7 +65,20 @@ public class freeBoardController {
 		boolean data = this.service.freeBoardInsert(map);
 		mav.addObject("data", data);
 		System.out.println("data ?? =========" + data);
-		mav.setViewName("/board/freeBoard");
+		mav.setViewName("redirect:/freeBoard");
+		
+		return mav;
+	}
+
+	@RequestMapping(value = "/freeBoardDelete", method = RequestMethod.POST)
+	public ModelAndView freeBoardDelete(@RequestParam Map<String, Object> map) {
+		
+		ModelAndView mav = new ModelAndView();
+		System.out.println("================== delete POST =====================");
+		
+		// 기능 구현하기 !!!  delete
+		
+		mav.setViewName("redirect:/freeBoard");
 		
 		return mav;
 	}

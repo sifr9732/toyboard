@@ -34,7 +34,8 @@
 			      <td class="td_1">No</td>
 			      <td class="td_2">title</td>
 			      <td class="td_3">writer</td>
-			      <td class="td_4">create</td>
+			      <td class="td_4">createDay</td>
+			      <td class="td_5">delete</td>
 			    </tr>
 			  </thead>
 			  <tbody>
@@ -49,6 +50,12 @@
 				       </td>
 				      <td class="td_3">${items.fb_writer }</td>
 				      <td class="td_4">${items.fb_createday }</td>
+				      <td class="td_5">
+				      	<form action="/freeBoardDelete" method="POST">
+				      		<input type="hidden" value="${items.fb_seq }" name="fb_seq">
+				      		<input type="submit" value="Delete">
+				      	</form>
+				      </td>
 			    </tr>
 			    </c:forEach> 
 			  </tbody>
