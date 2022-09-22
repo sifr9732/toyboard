@@ -28,6 +28,10 @@ public class freeBoardDAO {
 		return this.sqlSessionTemplate.insert("toyproject.freeBoardInsert", map);
 	}
 	
+	public int freeBoardDelete (Map<String, Object> map) {
+		return this.sqlSessionTemplate.delete("toyproject.freeBoardDelete", map);
+	}
+	
 	
 	
 }

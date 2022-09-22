@@ -36,5 +36,15 @@ public class freeBoardServiceImpl implements freeBoardService {
 			return chek == 1;
 		}
 	}
+	@Override
+	public boolean freeBoardDelete(Map<String, Object> map) {
+		int chek = this.dao.freeBoardDelete(map);
+
+		if(chek != 1 ) {
+			return chek == 0;
+		} else {
+			return chek == 1;
+		}
+	}
 	
 }

@@ -11,4 +11,6 @@ public interface freeBoardService {
 
 	boolean freeBoardInsert(Map<String, Object> map);
 
+	boolean freeBoardDelete(Map<String, Object> map);
+
 }

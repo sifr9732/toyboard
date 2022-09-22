@@ -61,5 +61,12 @@
 		);
 	
 	</insert>
+	
+	<delete id="freeBoardDelete" parameterType="hashMap">
+				
+		DELETE FROM 
+			freeboard 
+		WHERE fb_seq = #{fb_seq} 
+	</delete>
 
 </mapper>

@@ -75,8 +75,13 @@ public class freeBoardController {
 		
 		ModelAndView mav = new ModelAndView();
 		System.out.println("================== delete POST =====================");
+		boolean chek = this.service.freeBoardDelete(map);
+		
+//		System.out.println("check??? ============ "+chek);
 		
 		// 기능 구현하기 !!!  delete
+		
+		System.out.println("================== delete POST =====================");
 		
 		mav.setViewName("redirect:/freeBoard");
 		
