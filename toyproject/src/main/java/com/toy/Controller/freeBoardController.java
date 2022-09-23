@@ -23,8 +23,10 @@ public class freeBoardController {
 		ModelAndView mav = new ModelAndView();
 
 		List<Map<String, Object>> List = this.service.freeBoard_List(map);
-
+		Map<String, Object> total = this.service.freeBoardListTotal(map);
+		System.out.println("total ============ " + total);
 		System.out.println("List ============= " + List);
+		mav.addObject("total", total);
 		mav.addObject("boardList", List);
 
 		mav.setViewName("/board/freeBoard");

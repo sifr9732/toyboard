@@ -26,8 +26,7 @@
 				${items.fb_writer }
 				${items.fb_createday }
 			</c:forEach> --%>
-	
-		
+		<h3 id="freeBoardTotalCount">전체(${total.ListTotal })</h3>
 		<table class="table">
 			  <thead class="table-dark ">
 			   <tr class="theadTag">

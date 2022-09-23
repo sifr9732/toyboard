@@ -47,4 +47,9 @@ public class freeBoardServiceImpl implements freeBoardService {
 		}
 	}
 	
+	@Override 
+	public Map<String, Object> freeBoardListTotal(Map<String, Object> map) {
+		return this.dao.freeBoardListTotal(map);
+	}
+	
 }

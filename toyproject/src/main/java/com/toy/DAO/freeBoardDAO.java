@@ -32,6 +32,11 @@ public class freeBoardDAO {
 		return this.sqlSessionTemplate.delete("toyproject.freeBoardDelete", map);
 	}
 	
+	public Map<String, Object> freeBoardListTotal(Map<String, Object> map) {
+		
+		return this.sqlSessionTemplate.selectOne("toyproject.freeBoardListTotal", map);
+	}
+	
 	
 	
 }

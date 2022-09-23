@@ -13,4 +13,6 @@ public interface freeBoardService {
 
 	boolean freeBoardDelete(Map<String, Object> map);
 
+	Map<String, Object> freeBoardListTotal(Map<String, Object> map);
+
 }

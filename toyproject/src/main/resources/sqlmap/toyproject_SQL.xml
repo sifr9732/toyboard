@@ -69,4 +69,10 @@
 		WHERE fb_seq = #{fb_seq} 
 	</delete>
 
+	<select id="freeBoardListTotal" parameterType="hashMap" resultType="hashMap">
+		SELECT 
+			COUNT(*) AS ListTotal
+		FROM FREEBOARD
+	</select>
+
 </mapper>
