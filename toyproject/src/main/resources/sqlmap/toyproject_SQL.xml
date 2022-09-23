@@ -32,7 +32,8 @@
 		    , fb_writer
 		    , fb_content
 		    , fb_createday
-		FROM freeBoard;
+		FROM freeBoard
+		ORDER BY fb_seq DESC
 	</select>
 	
 	
