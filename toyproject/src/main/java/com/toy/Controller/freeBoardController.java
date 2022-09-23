@@ -4,6 +4,7 @@ import java.util.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -38,7 +39,7 @@ public class freeBoardController {
 	public ModelAndView freeBoardView(@RequestParam Map<String, Object> map) {
 
 		ModelAndView mav = new ModelAndView();
-
+		
 		Map<String, Object> List = this.service.freeBoard_View(map);
 		System.out.println("List ============= " + List);
 		mav.addObject("boardList", List);
@@ -89,5 +90,33 @@ public class freeBoardController {
 		
 		return mav;
 	}
+	
+	@RequestMapping(value = "/freeBoardUpdate", method = RequestMethod.GET)
+	public ModelAndView freeBoardUpdate(@RequestParam Map<String, Object> map) {
 
+		ModelAndView mav = new ModelAndView();
+
+		Map<String, Object> List = this.service.freeBoard_View(map);
+		System.out.println("List ============= " + List);
+		mav.addObject("data", List);
+
+		mav.setViewName("/board/freeBoardUpdate");
+
+		return mav;
+	}
+
+	@RequestMapping(value = "/freeBoardUpdate", method = RequestMethod.POST)
+	public ModelAndView freeBoardUpdatePost(@RequestParam Map<String, Object> map) {
+
+		ModelAndView mav = new ModelAndView();
+
+	
+		Boolean List = this.service.freeBoardUpdate(map);
+		System.out.println("List ============= " + List);
+		mav.addObject("data", List);
+
+		mav.setViewName("redirect:/freeBoard");
+
+		return mav;
+	}
 }

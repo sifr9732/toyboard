@@ -75,5 +75,16 @@
 			COUNT(*) AS ListTotal
 		FROM FREEBOARD
 	</select>
+	
+	<update id="freeBoardUpdate" parameterType="hashMap">
+		UPDATE freeboard 
+		SET
+			  fb_writer=#{fb_writer}
+			, fb_title=#{fb_title}
+		 	, fb_content=#{fb_content} 
+		 	, fb_createday=NOW()
+		WHERE 
+			  fb_seq = #{fb_seq}
+	</update>
 
 </mapper>

@@ -52,4 +52,16 @@ public class freeBoardServiceImpl implements freeBoardService {
 		return this.dao.freeBoardListTotal(map);
 	}
 	
+	@Override
+	public boolean freeBoardUpdate(Map<String, Object> map) {
+		int chek = this.dao.freeBoardUpdate(map);
+
+		if(chek != 1 ) {
+			return chek == 0;
+		} else {
+			return chek == 1;
+		}
+	}
+		
+	
 }

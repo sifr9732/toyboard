@@ -15,4 +15,6 @@ public interface freeBoardService {
 
 	Map<String, Object> freeBoardListTotal(Map<String, Object> map);
 
+	boolean freeBoardUpdate(Map<String, Object> map);
+
 }
