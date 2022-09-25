@@ -24,7 +24,7 @@
         <nav class="main_menu">
                 <a href="" class="nav_item">item_1</a>
                 <a href="" class="nav_item">item_2</a>
-                <a href="" class="nav_item">item_3</a>
+                <a href="/ajaxBoard" class="nav_item">Ajax게시판</a>
  				<a href="/freeBoard" class="nav_item">자유게시판</a>
         </nav>
     </div>

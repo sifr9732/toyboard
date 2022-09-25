@@ -86,5 +86,18 @@
 		WHERE 
 			  fb_seq = #{fb_seq}
 	</update>
+	
+	<!-- Ajax 게시판  -->
+	<select parameterType="hashMap" resultType="hashMap" id = "AjaxBoardList">
+		SELECT 
+			  fb_seq
+		    , fb_title
+		    , fb_writer
+		    , fb_content
+		    , fb_createday
+		FROM freeBoard
+		ORDER BY fb_seq DESC
+	</select>
+	
 
 </mapper>
